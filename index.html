@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSOVE</title>
+    <link rel="icon" href="./assets/img/header/logo.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./build/tailwind.css">
+    <link rel="stylesheet" href="./build/app.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header class="py-10 xl:pt-6 xl:pb-14">
+        <div
+            class="container mx-auto w-[80%] lg:relative flex flex-col lg:flex-row lg:justify-between gap-y-4 lg:gap-y-0">
+            <div class="flex justify-center lg:justify-normal items-center ">
+                <a class="font-bold flex" href="#">
+                    <img class="w-80 me-2 " src="./assets/img/header/logo.svg" alt="" srcset="">
+                </a>
+            </div>
+
+            <div class="flex flex-col gap-y-4 lg:flex-row lg:gap-x-10 lg:gap-y-0">
+                <!-- location -->
+                <div class="flex justify-center items-center gap-x-2 lg:justify-normal">
+                    <i class="ri-map-pin-2-fill text-2xl text-cyan-300"></i>
+                    <div>123 Arling, Miola, NY</div>
+                </div>
+                <!-- Phone -->
+                <div class="flex justify-center items-center gap-x-2 lg:justify-normal">
+                    <i class="ri-phone-fill text-2xl text-cyan-300"></i>
+                    <div>(+487) 989 1105</div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <button class="btn btn-sm btn-outline">Book now</button>
+                </div>
+            </div>
+        </div>
+        <nav
+            class="mnav bg-white fixed w-[300px] top-0 h-screen -left-[300px] shadow-2xl lg:hidden transition-all duration-300 z-20">
+            <!-- nav trigger btn -->
+            <div
+                class="mnav__close-btn w-8 h-8 bg-primary relative -right-full top-8 flex justify-center items-center rounded-tr-lg rounded-br-lg cursor-pointer transition-all">
+                <i class="mnav__close-btn-icon text-2x ri-arrow-right-s-line"></i>
+            </div>
+            <!-- logo, list, form -->
+            <div class="px-12 flex flex-col gap-y-12 h-full">
+                <a href="#" class="flex items-center">
+                    <img src="./assets/img/header/logo.svg" class="w-80" alt="">
+                </a>
+                <!-- list -->
+                <ul class="flex flex-col gap-y-5">
+                    <li>
+                        <a href="#" onclick="scrollToSection('home')" class="text-secondary hover:text-accent transition-all duration-300">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="scrollToSection('doctor')" class="text-secondary hover:text-accent transition-all duration-300">Doctors</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="scrollToSection('department')" class="text-secondary hover:text-accent transition-all duration-300">Department</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="scrollToSection('services')" class="text-secondary hover:text-accent transition-all duration-300">Services</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="scrollToSection('blog')" class="text-secondary hover:text-accent transition-all duration-300">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="scrollToSection('contact')" class="text-secondary hover:text-accent transition-all duration-300">Contact</a>
+                    </li>
+                </ul>
+                <!-- form -->
+                <form action="" class="relative flex gap-x-[10px]">
+                    <label for="mnav-search-input">
+                        <i class="ri-search-line text-2xl text-accent"></i>
+                    </label>
+                    <input type="text" id="mnav-search-input" placeholder="Search..."
+                        class="outline-none w-[160px] border-b-2 focus:border-b-2 focus:border-accent placeholder:italic">
+                </form>
+            </div>
+        </nav>
+        <!-- desktop Nav -->
+        <nav
+            class="bg-white absolute w-[80%] left-36 top-[135px] -bottom-[86px] shadow-custom1 h-16 rounded-[10px] hidden lg:flex lg:items-center lg:justify-between lg:px-16">
+            <!-- list -->
+            <ul class="flex gap-x-4">
+                <li>
+                    <a href="#" onclick="scrollToSection('home')"
+                        class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Home</a>
+                </li>
+                <li>
+                    <a href="#" onclick="scrollToSection('doctor')"
+                        class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Doctors</a>
+                </li>
+                <li>
+                    <a href="#" onclick="scrollToSection('department')"
+                        class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Department</a>
+                </li>
+                <li>
+                    <a href="#" onclick="scrollToSection('services')"
+                        class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Services</a>
+                </li>
+                <li>
+                    <a href="#" onclick="scrollToSection('blog')"
+                        class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Blog</a>
+                </li>
+                <li>
+                    <a href="#" onclick="scrollToSection('contact')"
+                        class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Contact</a>
+                </li>
+            </ul>
+            <!-- form -->
+            <form class="relative flex gap-x-[10px]">
+                <label for="search-input" class="flex justify-center items-center group">
+                    <i class="ri-search-line text-2xl text-accent"></i>
+                </label>
+                <input type="text" id="search-input"
+                    class="outline-none w-[100px] focus:w-[180px] focus:border-b-2 focus:border-accent placeholder:text-base transition-all duration-150"
+                    placeholder="Search...">
+            </form>
+        </nav>
+    </header>
+
+    <!-- hero -->
+    <section id="home" class="hero bg-grey py-12 xl:pt-12 xl:pb-0 overflow-hidden">
+        <div class="container mx-auto h-full">
+            <!-- text & img -->
+            <div class="flex flex-col xl:flex-row items-center justify-between h-full">
+                <!-- text -->
+                <div class="hero__text xl:w-[50%] xl:py-32 xl:pl-32 text-center xl:text-left">
+                    <!-- badge -->
+                    <div
+                        class="flex items-center bg-white py-[10px] px-[20px] w-max gap-x-2 mb-[26px] rounded-full mx-auto xl:mx-0">
+                        <i class="ri-heart-pulse-line text-2xl text-accent"></i>
+                        <div class="uppercase text-base font-medium text-[#9ab4b7] tracking-[2.24px]">
+                            Live your life
+                        </div>
+                    </div>
+                    <!-- title -->
+                    <h1 class="h1 mb-6">We care about your health</h1>
+                    <!-- desc -->
+                    <p class="mb-[42px] md:max-w-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+                        error deleniti iure aperiam rem id. Reiciendis iste harum ducimus ratione esse magnam expedita
+                        quae voluptatem, non debitis! Vitae, excepturi laboriosam!</p>
+                    <button class="btn btn-lg btn-accent mx-auto xl:mx-0 ">Contact us</button>
+                </div>
+                <!-- img -->
+                <div class="hero__img hidden xl:flex w-[814px] self-end">
+                    <img src="./assets/img/hero/img.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end hero -->
+    <!-- stats -->
+    <section class="stats section">
+        <div class="container w-[80%] mx-auto">
+            <!-- wrapper -->
+            <div class="flex flex-col xl:flex-row gap-y-6 justify-between">
+                <!-- item -->
+                <div class="stats__item flex-1 xl:border-r flex flex-col items-center">
+                    <div class="text-4xl xl:text-[64px] font-semibold text-accent-tertiary xl:mb-2">+5120</div>
+                    <div>Happy Patients</div>
+                </div>
+                <!-- item -->
+                <div class="stats__item flex-1 xl:border-r flex flex-col items-center">
+                    <div class="text-4xl xl:text-[64px] font-semibold text-accent-tertiary xl:mb-2">26</div>
+                    <div>Total Branches</div>
+                </div>
+                <!-- item -->
+                <div class="stats__item flex-1 xl:border-r flex flex-col items-center">
+                    <div class="text-4xl xl:text-[64px] font-semibold text-accent-tertiary xl:mb-2">+55</div>
+                    <div>Senior Doctors</div>
+                </div>
+                <!-- item -->
+                <div class="stats__item flex-1 flex flex-col items-center">
+                    <div class="text-4xl xl:text-[64px] font-semibold text-accent-tertiary xl:mb-2">+10</div>
+                    <div>Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end stats -->
+    <!-- service -->
+    <section id="services" class="services">
+        <!-- bg -->
+        <div
+            class="bg-accent-secondary bg-cover bg-no-repeat max-w-[1440px] mx-4 xl:mx-auto rounded-[20px] xl:pt-[70px] px-6 xl:px-0 relative h-[369px] flex items-center xl:items-start -z-10 xl:w-[80%]">
+            <div class="container mx-auto">
+                <!-- text -->
+                <div class="services__top flex items-center flex-col xl:flex-row xl:mb-[68px]">
+                    <h2 class="h2 xl:pl-7 text-white flex-1 mb-4 xl:mb-0 text-center xl:text-left">Our best services for
+                        your solution</h2>
+                    <p class="text-white flex-1 text-center xl:text-left max-w-2xl xl:max-w-none">Lorem ipsum dolor sit
+                        amet consectetur adipisicing elit. Accusantium distinctio eum ipsa maxime consectetur
+                        recusandae, sit hic, aspernatur commodi odio expedita iste aperiam exercitationem. Quo aut
+                        culpa, tenetur ipsa rem labore. </p>
+                </div>
+            </div>
+        </div>
+        <!-- grid container -->
+        <div class="container mx-auto mt-8 xl:-mt-[144px] xl:w-[70%]">
+            <!-- grid -->
+            <div class="grid xl:grid-cols-4 gap-5 xl:px-0">
+                <!-- grid item -->
+                <div
+                    class="services__item bg-white p-[10px] rounded-[20px] shadow-custom2 min-h-[250px] flex flex-col items-center text-center">
+                    <!-- grid item icon -->
+                    <div class="mb-[15px]">
+                        <img src="./assets/icons/services/icon-1.svg" alt="">
+                    </div>
+                    <!-- grid -->
+                    <h3 class="h3 mb-[10px]">General Practitioners</h3>
+                    <!-- grid item description -->
+                    <p class="font-light leading-normal max-w-[300px]">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.</p>
+                </div>
+                <!-- grid item -->
+                <div
+                    class="services__item bg-white p-[10px] rounded-[20px] shadow-custom2 min-h-[250px] flex flex-col items-center text-center">
+                    <!-- grid item icon -->
+                    <div class="mb-[15px]">
+                        <img src="./assets/icons/services/icon-2.svg" alt="">
+                    </div>
+                    <!-- grid -->
+                    <h3 class="h3 mb-[10px]">General Practitioners</h3>
+                    <!-- grid item description -->
+                    <p class="font-light leading-normal max-w-[300px]">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.</p>
+                </div>
+                <!-- grid item -->
+                <div
+                    class="services__item bg-white p-[10px] rounded-[20px] shadow-custom2 min-h-[250px] flex flex-col items-center text-center">
+                    <!-- grid item icon -->
+                    <div class="mb-[15px]">
+                        <img src="./assets/icons/services/icon-3.svg" alt="">
+                    </div>
+                    <!-- grid -->
+                    <h3 class="h3 mb-[10px]">General Practitioners</h3>
+                    <!-- grid item description -->
+                    <p class="font-light leading-normal max-w-[300px]">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.</p>
+                </div>
+                <!-- grid item -->
+                <div
+                    class="services__item bg-white p-[10px] rounded-[20px] shadow-custom2 min-h-[250px] flex flex-col items-center text-center">
+                    <!-- grid item icon -->
+                    <div class="mb-[15px]">
+                        <img src="./assets/icons/services/icon-4.svg" alt="">
+                    </div>
+                    <!-- grid -->
+                    <h3 class="h3 mb-[10px]">General Practitioners</h3>
+                    <!-- grid item description -->
+                    <p class="font-light leading-normal max-w-[300px]">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end service -->
+
+    <!-- oppointment -->
+    <section class="appointment section">
+        <div class="container mx-auto xl:w-[80%]">
+            <!-- title -->
+            <h2 class="appointment__title h2 mb-5 xl:mb-[50px] text-center xl:text-left">
+                Book Appointment or call:
+                <span class="text-accent-tertiary">(+498) 384 9452</span>
+            </h2>
+            <!-- form -->
+            <form class="appointment__form flex flex-col gap-y-5">
+                <!-- section wrapper -->
+                <div class="flex flex-col xl:flex-row gap-5">
+                    <!-- section 1 -->
+                    <div class="select xl:w-[50%] border py-4 rounded-[10px] relative flex items-center">
+                        <!-- icon -->
+                        <div class="absolute right-4 top-[20px]
+                        ">
+                            <i class="ri-arrow-down-s-line text-[28px] text-primary"></i>
+                        </div>
+                        <!-- select -->
+                        <select class="appearance-none w-full outline-none h-full bg-transparent px-4 pl-8 ">
+                            <option value="1">Select Department</option>
+                            <option value="2">Department 1</option>
+                            <option value="3">Department 2</option>
+                            <option value="4">Department 3</option>
+                        </select>
+                    </div>
+                    <!-- section 2 -->
+                    <div class="select xl:w-[50%] border py-4 rounded-[10px] relative flex items-center">
+                        <!-- icon -->
+                        <div class="absolute right-4 top-[20px]
+                        ">
+                            <i class="ri-arrow-down-s-line text-[28px] text-primary"></i>
+                        </div>
+                        <!-- select -->
+                        <select class="appearance-none w-full outline-none h-full bg-transparent px-4 pl-8 ">
+                            <option value="1">Select doctor</option>
+                            <option value="2">Dr. Jane Doe</option>
+                            <option value="3">Dr. Jhoe Doe</option>
+                            <option value="4">Dr. Bob Smith</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- input wrapper -->
+                <div class="flex flex-col xl:flex-row gap-5">
+                    <input type="text" class="input" placeholder="Full Name">
+                    <input type="text" class="input" placeholder="Phone Number">
+                </div>
+                <!-- input wrapper -->
+                <div class="flex flex-col xl:flex-row gap-5">
+                    <input type="date" class="input" placeholder="Full Name">
+                    <input type="time" class="input" placeholder="Phone Number">
+                </div>
+                <!-- btn -->
+                <button class="btn btn-lg btn-accent self-start" type="submit">Book an appointment</button>
+            </form>
+        </div>
+    </section>
+    <!-- end oppointment -->
+
+    <!-- testimonials -->
+    <section class="testimonial bg-testimonials bg-cover bg-right bg-no-repeat ">
+        <div class="testimonial__container container mx-auto w-[80%]">
+            <div class="flex flex-col items-center gap-x-14 xl:py-0 py-10 xl:flex-row">
+                <div class="hidden w-full xl:px-8 xl:flex">
+                    <img src="./assets/img/testimonials/img.png">
+                </div>
+                <!-- slider -->
+                <div class="max-w-[98%] xl:max-w[710px]">
+                    <!-- Slider main container -->
+                    <div class="swiper xl:w-[600px] w-[250px]  h-[400px]">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+                                <div class="h-full flex flex-col justify-center items-start">
+                                    <div class="max-w-[680px] mx-0 text-center xl:text-left">
+                                        <!-- message -->
+                                        <p class="font-light relative text-[22px] text-[#4c5354] leading-[190%] text-center xl:text-left before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat
+                                        after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-10 after:h-10 after:bg-no-repeat mb-7
+                                        ">
+                                            <span class="mx-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                Obcaecati est iure eos numquam soluta laudantium delectus cumque
+                                                architecto minima repudiandae aperiam quae consequuntur iusto
+                                                perspiciatis voluptates</span>
+                                        </p>
+                                        <!-- name -->
+                                        <div class="text-[26px] text-[#4c5354] font-semibold">James Rodrigo</div>
+                                        <!-- job -->
+                                        <div class="text-[#9ab4b7] font-medium uppercase tracking-[2.24px]">Customer
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide">
+                                <div class="h-full flex flex-col justify-center items-start">
+                                    <div class="max-w-[680px] mx-0 text-center xl:text-left">
+                                        <!-- message -->
+                                        <p class="font-light relative text-[22px] text-[#4c5354] leading-[190%] text-center xl:text-left before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat
+                                                                
+                                        after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-10 after:h-10 after:bg-no-repeat mb-7
+                                        ">
+                                            <span class="mx-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                Obcaecati est iure eos numquam soluta laudantium delectus cumque
+                                                architecto minima repudiandae aperiam quae consequuntur iusto
+                                                perspiciatis voluptates</span>
+                                        </p>
+                                        <!-- name -->
+                                        <div class="text-[26px] text-[#4c5354] font-semibold">James Rodrigo</div>
+                                        <!-- job -->
+                                        <div class="text-[#9ab4b7] font-medium uppercase tracking-[2.24px]">Customer
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- swiper pagination -->
+                        </div>
+                        <div class="swiper-pagination">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end testimonials -->
+
+    <!-- team -->
+    <section id="doctor" class="team section">
+        <div class="container mx-auto w-[80%]">
+            <!-- titel -->
+            <h2 class="team__title h2 mg-[50px] text-center xl:text-left">
+                Our Team
+            </h2>
+            <!-- slider -->
+            <div class="max-w-[98%] xl:max-w[1200px] mt-10">
+                <!-- Slider main container -->
+                <div class="team__slider swiper min-h-[320px]">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="flex flex-col md:flex-row gap-9">
+                                <!-- 1 -->
+                                <div class="flex-1 flex flex-col xl:flex-row">
+                                    <!-- item -->
+                                    <div class="flex flex-col xl:flex-row items-center gap-[30px]">
+                                        <!-- img -->
+                                        <div class="flex-1">
+                                            <img src="./assets/img/team/doctor-1.png" alt="" srcset="">
+                                        </div>
+                                        <!-- info -->
+                                        <div>
+                                            <h4 class="h4 mb-[10px]">Dr. Leslie Taylor</h4>
+                                            <!-- job -->
+                                            <div
+                                                class="font-medium uppercase tracking-[2.24px] text-[#9ab4b7] mb-[20px]">
+                                                Pediatrician</div>
+                                            <!-- desc -->
+                                            <p class="font-light mb-[26px] max-w-[320px] ">Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit. Sit minima odit autem.</p>
+                                            <!-- socials -->
+                                            <div class="flex items-center text-[30px] gap-x-5 text-accent-tertiary">
+                                                <a href="#" class="cursor-pointer hover:text-accent transition-all">
+                                                    <i class="ri-youtube-fill"></i>
+                                                </a>
+                                                <a href="#" class="cursor-pointer hover:text-accent transition-all">
+                                                    <i class="ri-facebook-circle-fill"></i>
+                                                </a>
+                                                <a href="#" class="cursor-pointer hover:text-accent transition-all">
+                                                    <i class="ri-instagram-fill"></i>
+                                                </a>
+                                                <a href="#" class="cursor-pointer hover:text-accent transition-all">
+                                                    <i class="ri-pinterest-fill"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 2 -->
+                                <div class="flex-1 flex flex-col xl:flex-row">
+                                    <!-- item -->
+                                    <div class="flex flex-col xl:flex-row items-center gap-[30px]">
+                                        <!-- img -->
+                                        <div class="flex-1">
+                                            <img src="./assets/img/team/doctor-2.png" alt="" srcset="">
+                                        </div>
+                                        <!-- info -->
+                                        <div>
+                                            <h4 class="h4 mb-[10px]">Dr. Zachary Brown</h4>
+                                            <!-- job -->
+                                            <div
+                                                class="font-medium uppercase tracking-[2.24px] text-[#9ab4b7] mb-[20px]">
+                                                Cardiologist</div>
+                                            <!-- desc -->
+                                            <p class="font-light mb-[26px] max-w-[320px] ">Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit. Sit minima odit autem.</p>
+                                            <!-- socials -->
+                                            <div class="flex items-center text-[30px] gap-x-5 text-accent-tertiary">
+                                                <a href="#" class="cursor-pointer hover:text-accent transition-all">
+                                                    <i class="ri-youtube-fill"></i>
+                                                </a>
+                                                <a href="#" class="cursor-pointer hover:text-accent transition-all">
+                                                    <i class="ri-facebook-circle-fill"></i>
+                                                </a>
+                                                <a href="#" class="cursor-pointer hover:text-accent transition-all">
+                                                    <i class="ri-instagram-fill"></i>
+                                                </a>
+                                                <a href="#" class="cursor-pointer hover:text-accent transition-all">
+                                                    <i class="ri-pinterest-fill"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="flex flex-col md:flex-row gap-9">
+                                <!-- 1 -->
+                                <div class="flex-1 flex flex-col xl:flex-row">
+                                    <!-- item -->
+                                    <div class="flex flex-col xl:flex-row items-center gap-[30px]">
+                                        <!-- img -->
+                                        <div class="flex-1">
+                                            <img src="./assets/img/team/doctor-1.png" alt="" srcset="">
+                                        </div>
+                                        <!-- info -->
+                                        <div>
+                                            <h4 class="h4 mb-[10px]">Dr. Leslie Taylor</h4>
+                                            <!-- job -->
+                                            <div
+                                                class="font-medium uppercase tracking-[2.24px] text-[#9ab4b7] mb-[20px]">
+                                                Pediatrician</div>
+                                            <!-- desc -->
+                                            <p class="font-light mb-[26px] max-w-[320px] ">Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit. Sit minima odit autem.</p>
+                                            <!-- socials -->
+                                            <div class="flex items-center text-[30px] gap-x-5 text-accent-tertiary">
+                                                <a href="#" class="cursor-pointer hover:text-accent transition-all">
+                                                    <i class="ri-youtube-fill"></i>
+                                                </a>
+                                                <a href="#" class="cursor-pointer hover:text-accent transition-all">
+                                                    <i class="ri-facebook-circle-fill"></i>
+                                                </a>
+                                                <a href="#" class="cursor-pointer hover:text-accent transition-all">
+                                                    <i class="ri-instagram-fill"></i>
+                                                </a>
+                                                <a href="#" class="cursor-pointer hover:text-accent transition-all">
+                                                    <i class="ri-pinterest-fill"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 2 -->
+                                <div class="flex-1 flex flex-col xl:flex-row">
+                                    <!-- item -->
+                                    <div class="flex flex-col xl:flex-row items-center gap-[30px]">
+                                        <!-- img -->
+                                        <div class="flex-1">
+                                            <img src="./assets/img/team/doctor-2.png" alt="" srcset="">
+                                        </div>
+                                        <!-- info -->
+                                        <div>
+                                            <h4 class="h4 mb-[10px]">Dr. Zachary Brown</h4>
+                                            <!-- job -->
+                                            <div
+                                                class="font-medium uppercase tracking-[2.24px] text-[#9ab4b7] mb-[20px]">
+                                                Cardiologist</div>
+                                            <!-- desc -->
+                                            <p class="font-light mb-[26px] max-w-[320px] ">Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit. Sit minima odit autem.</p>
+                                            <!-- socials -->
+                                            <div class="flex items-center text-[30px] gap-x-5 text-accent-tertiary">
+                                                <a href="#" class="cursor-pointer hover:text-accent transition-all">
+                                                    <i class="ri-youtube-fill"></i>
+                                                </a>
+                                                <a href="#" class="cursor-pointer hover:text-accent transition-all">
+                                                    <i class="ri-facebook-circle-fill"></i>
+                                                </a>
+                                                <a href="#" class="cursor-pointer hover:text-accent transition-all">
+                                                    <i class="ri-instagram-fill"></i>
+                                                </a>
+                                                <a href="#" class="cursor-pointer hover:text-accent transition-all">
+                                                    <i class="ri-pinterest-fill"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- swiper pagination -->
+                    </div>
+                    <div class="swiper-pagination">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end team -->
+
+    <!-- faq -->
+    <section class="faq">
+        <div class="container mx-auto w-[80%]">
+            <h2 class="fag__title h2 text-center mb-[50px] ">We've got answers</h2>
+            <div class="max-w-5xl mx-auto ">
+                <!-- item 1-->
+                <div class="faq__item px-[30px] pt-7 pb-4 border-b cursor-pointer select-none">
+                    <!-- title & icon -->
+                    <div class="flex items-center justify-between mb-[10px]">
+                        <!-- title -->
+                        <h4 class="h4 ">Why to believe in Insove medical healthcare ?</h4>
+                        <!-- icon -->
+                        <div class="faq__btn text-accent ">
+                            <i class="ri-add-fill"></i>
+                        </div>
+                    </div>
+                    <!-- answer -->
+                    <div class="faq__answer h-0 overflow-hidden">
+                        <p class="font-light">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cum sapiente, magnam
+                            quis corrupti quia.
+                        </p>
+                    </div>
+                </div>
+                <!-- item 2-->
+                <div class="faq__item px-[30px] pt-7 pb-4 border-b cursor-pointer select-none">
+                    <!-- title & icon -->
+                    <div class="flex items-center justify-between mb-[10px]">
+                        <!-- title -->
+                        <h4 class="h4">What preparations are necessary before undergoing surgery</h4>
+                        <!-- icon -->
+                        <div class="faq__btn text-accent ">
+                            <i class="ri-add-fill"></i>
+                        </div>
+                    </div>
+                    <!-- answer -->
+                    <div class="faq__answer h-0 overflow-hidden">
+                        <p class="font-light">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cum sapiente, magnam
+                            quis corrupti quia.
+                        </p>
+                    </div>
+                </div>
+                <!-- item 3 -->
+                <div class="faq__item px-[30px] pt-7 pb-4 border-b cursor-pointer select-none">
+                    <!-- title & icon -->
+                    <div class="flex items-center justify-between mb-[10px]">
+                        <!-- title -->
+                        <h4 class="h4 ">How long will it take to recover after the survey ?</h4>
+                        <!-- icon -->
+                        <div class="faq__btn text-accent ">
+                            <i class="ri-add-fill"></i>
+                        </div>
+                    </div>
+                    <!-- answer -->
+                    <div class="faq__answer h-0 overflow-hidden">
+                        <p class="font-light">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cum sapiente, magnam
+                            quis corrupti quia.
+                        </p>
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="faq__item px-[30px] pt-7 pb-4 border-b cursor-pointer select-none">
+                    <!-- title & icon -->
+                    <div class="flex items-center justify-between mb-[10px]">
+                        <!-- title -->
+                        <h4 class="h4 ">Why to believe in Insove medical healthcare ?</h4>
+                        <!-- icon -->
+                        <div class="faq__btn text-accent ">
+                            <i class="ri-add-fill"></i>
+                        </div>
+                    </div>
+                    <!-- answer -->
+                    <div class="faq__answer h-0 overflow-hidden">
+                        <p class="font-light">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cum sapiente, magnam
+                            quis corrupti quia.
+                        </p>
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="faq__item px-[30px] pt-7 pb-4 border-b cursor-pointer select-none">
+                    <!-- title & icon -->
+                    <div class="flex items-center justify-between mb-[10px]">
+                        <!-- title -->
+                        <h4 class="h4 ">Why to believe in Insove medical healthcare ?</h4>
+                        <!-- icon -->
+                        <div class="faq__btn text-accent ">
+                            <i class="ri-add-fill"></i>
+                        </div>
+                    </div>
+                    <!-- answer -->
+                    <div class="faq__answer h-0 overflow-hidden">
+                        <p class="font-light">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cum sapiente, magnam
+                            quis corrupti quia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end faq -->
+
+    <!-- department -->
+    <section id="department" class="departments section">
+        <div
+            class="departments__bg bg-departments bg-cover xl:bg-auto bg-center bg-no-repeat max-w-[1466px] mx-4 xl:mx-auto rounded-[20px] px-6 xl:px-0 py-12 xl:pt-[80px] xl:pb-[90px] relative min-h-[588px] flex items-center">
+            <div class="departments__container container mx-auto w-[80%]">
+                <div class="flex flex-col xl:flex-row gap-x-5">
+                    <div
+                        class="xl:w-[310px] flex flex-col gap-y-[30px] xl:gap-y-[40px] font-medium uppercase text-center xl:text-left text-base text-[#9ab4b7] xl:pt-3  xl:text-[17px] mb-[50px] xl:mb-0">
+                        <div class="cursor-pointer hover:text-accent transition-all">Laboratory Analysis</div>
+                        <div class="cursor-pointer hover:text-accent transition-all">Cardiology Clinic</div>
+                        <div class="cursor-pointer hover:text-accent transition-all">Gynecology Clinic</div>
+                        <div class="cursor-pointer hover:text-accent transition-all">Pathology Clinic</div>
+                        <div class="cursor-pointer hover:text-accent transition-all">Pediatrics Clinic</div>
+                        <div class="cursor-pointer hover:text-accent transition-all">Neurology clinic</div>
+                    </div>
+                    <div class="xl:w-[640px]">
+                        <!-- title -->
+                        <h2 class="h2 mb-[20px] text-center xl:text-left">Cardiology Clinic</h2>
+                        <!-- description -->
+                        <p class="mb-[30px] font-light text-center xl:text-left">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta iste voluptatibus nesciunt
+                            facere voluptas numquam laudantium obcaecati placeat quas qui? Provident, ducimus itaque.
+                            <br><br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolores, nam similique aliquam
+                            voluptatem beatae consequuntur velit quod cupiditate vitae quisquam? Dolore doloribus error
+                            sed quo. Voluptatem, tenetur. Nostrum, qui.
+                        </p>
+                        <div
+                            class="flex flex-col xl:flex-row items-center xl:justify-between max-w-[555px] mb-[50px] mx-auto xl:mx-0  ">
+                            <div class="text-accent xl:border-r border-[#dcdcdc] xl:pr-6">Neurocritical Care</div>
+                            <div class="text-accent xl:border-r border-[#dcdcdc] xl:pr-6">Neuro Oncology</div>
+                            <div class="text-accent xl:border-r border-[#dcdcdc] xl:pr-6">Geriatric Neurology</div>
+                        </div>
+                        <button class="btn btn-lg btn-accent mx-auto xl:mx-0">
+                            Learn more
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end department -->
+
+    <!-- blog  -->
+    <section id="blog" class="blog">
+        <div class="container mx-auto w-[80%]">
+            <h2 class="blog__title h2 mg-[50px] text-center xl:text-left mb-5">Our Recenets Pots</h2>
+            <!-- blog posts -->
+            <div class="flex flex-col xl:flex-row gap-y-6 gap-x-5 xl:gap-y-0 items-center xl:justify-between mb-[50px]">
+                <!-- blog 1 -->
+                <div
+                    class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+                    <!-- img -->
+                    <div class="relative overflow-hidden">
+                        <img class="group-hover:scale-110 transition-all duration-500" src="./assets/img/blog/img-1.png"
+                            alt="" srcset="">
+                        <!-- badge -->
+                        <div
+                            class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
+                            Medical
+                        </div>
+                    </div>
+                    <!-- text -->
+                    <div class="px-5 py-6">
+                        <!-- date -->
+                        <div class="mb-4">Jan 2, 2023</div>
+                        <!-- title -->
+                        <h4 class="h4 mb-[10px]">10 foods to avoid for your heart healthy</h4>
+                        <!-- description -->
+                        <p class="font-light">It's normal to feel anxiety, worry and grief any time you're diagnosed
+                            with a condition that's certainly true...
+                            <a class="italic underline text-[#4c5354]" href="">Read more</a>
+                        </p>
+
+                    </div>
+                </div>
+                <!-- blog 2 -->
+                <div
+                    class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+                    <!-- img -->
+                    <div class="relative overflow-hidden">
+                        <img class="group-hover:scale-110 transition-all duration-500" src="./assets/img/blog/img-2.png"
+                            alt="" srcset="">
+                        <!-- badge -->
+                        <div
+                            class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
+                            Medical
+                        </div>
+                    </div>
+                    <!-- text -->
+                    <div class="px-5 py-6">
+                        <!-- date -->
+                        <div class="mb-4">Jan 2, 2023</div>
+                        <!-- title -->
+                        <h4 class="h4 mb-[10px]">10 foods to avoid for your heart healthy</h4>
+                        <!-- description -->
+                        <p class="font-light">It's normal to feel anxiety, worry and grief any time you're diagnosed
+                            with a condition that's certainly true...
+                            <a class="italic underline text-[#4c5354]" href="">Read more</a>
+                        </p>
+
+                    </div>
+                </div>
+                <!-- blog 3 -->
+                <div
+                    class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+                    <!-- img -->
+                    <div class="relative overflow-hidden">
+                        <img class="group-hover:scale-110 transition-all duration-500" src="./assets/img/blog/img-3.png"
+                            alt="" srcset="">
+                        <!-- badge -->
+                        <div
+                            class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
+                            Medical
+                        </div>
+                    </div>
+                    <!-- text -->
+                    <div class="px-5 py-6">
+                        <!-- date -->
+                        <div class="mb-4">Jan 2, 2023</div>
+                        <!-- title -->
+                        <h4 class="h4 mb-[10px]">10 foods to avoid for your heart healthy</h4>
+                        <!-- description -->
+                        <p class="font-light">It's normal to feel anxiety, worry and grief any time you're diagnosed
+                            with a condition that's certainly true...
+                            <a class="italic underline text-[#4c5354]" href="">Read more</a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end blog -->
+
+    <!-- brands -->
+    <section class="brands section">
+        <div class="container mx-auto w-[80%]">
+            <div class="flex flex-col xl:flex-row gap-y-12 xl:gap-y-0 justify-between items-center">
+                <img class="brands__logo" src="./assets/img/brands/brand-1.svg" alt="">
+                <img class="brands__logo" src="./assets/img/brands/brand-2.svg" alt="">
+                <img class="brands__logo" src="./assets/img/brands/brand-3.svg" alt="">
+                <img class="brands__logo" src="./assets/img/brands/brand-4.svg" alt="">
+                <img class="brands__logo" src="./assets/img/brands/brand-5.svg" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- end brands -->
+
+    <!-- newsletter -->
+    <section class="newsletter bg-accent md:h-[444px] py-12 flex items-center relative overflow-hidden">
+        <!-- pattern -->
+        <div class="absolute left-0 bottom-0">
+            <img src="./assets/img/newsletter/pattern.svg" alt="">
+        </div>
+        <!-- container -->
+        <div class="newsletter__container container mx-auto w-[80%]">
+            <!-- wrapper -->
+            <div class="flex flex-col lg:flex-row lg:items-center lg:gap-x-[58px]">
+                <!-- text -->
+                <div class="flex-1 z-10 text-center md:text-left">
+                    <div class="text-base uppercase text-white tracking-[2.24px] font-medium">Our newsletter</div>
+                    <h1 class="h1 text-white my-3">Subcribe to get more updates</h1>
+                </div>
+                <!-- form -->
+                <form class="flex-1 ">
+                    <div class="flex flex-col md:flex-row relative gap-y-4">
+                        <input type="text" placeholder="Your email address "
+                            class="rounded-full w-full h-[66px] bg-transparent border-[3px] border-white outline-none pl-[30px] placeholder:text-white focus:text-white">
+                        <button class="btn btn-lg bg-white md:absolute right-0">Subcribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- end newsletter -->
+
+    <!-- footer -->
+    <footer id="contact" class="footer pt-12 xl:pt-[150px]">
+        <div class="container mx-auto w-[80%] pb-12 xl:pb-[100px]">
+            <div class="flex flex-col xl:flex-row gap-x-5 gap-y-10">
+                <!-- footer contact section -->
+                <div class="footer__item flex-1">
+                    <!-- logo -->
+                    <a href="#">
+                        <img class="mb-[30px]" src="./assets/img/header/logo.svg" alt="" srcset="">
+                    </a>
+                    <!-- description -->
+                    <p class="mb-[20px]">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum velit eos voluptate?
+                    </p>
+                    <!-- Location, email & phone -->
+                    <div class="flex flex-col gap-y-3 mb-10 ">
+                        <div class="flex items-center gap-x-[6px]">
+                            <i class="ri-map-pin-fill text-[24px] text-accent"></i>
+                            <div>123 Arling, Miola, NY</div>
+                        </div>
+                        <div class="flex items-center gap-x-[6px]">
+                            <i class="ri-mail-fill text-[24px] text-accent"></i>
+                            <div>insove@email.com</div>
+                        </div>
+                        <div class="flex items-center gap-x-[6px]">
+                            <i class="ri-phone-fill text-[24px] text-accent"></i>
+                            <div>(+123) 456 78910</div>
+                        </div>
+                    </div>
+                    <!-- social -->
+                    <div class="flex gap-[14px] text-[30px]">
+                        <div
+                            class="p-[10px] rounded-[10px] shadow-custom2 text-accent-tertiary hover:text-accent cursor-pointer transition-all">
+                            <i class="ri-facebook-circle-fill"></i>
+                        </div>
+                        <div
+                            class="p-[10px] rounded-[10px] shadow-custom2 text-accent-tertiary hover:text-accent cursor-pointer transition-all">
+                            <i class="ri-instagram-line"></i>
+                        </div>
+                        <div
+                            class="p-[10px] rounded-[10px] shadow-custom2 text-accent-tertiary hover:text-accent cursor-pointer transition-all">
+                            <i class="ri-twitter-fill"></i>
+                        </div>
+                        <div
+                            class="p-[10px] rounded-[10px] shadow-custom2 text-accent-tertiary hover:text-accent cursor-pointer transition-all">
+                            <i class="ri-linkedin-box-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- footer quick links section -->
+                <div class="footer__item flex-1">
+                    <h4 class="h4 mb-5">Quick Links</h4>
+                    <div class="flex gap-x-5">
+                        <!-- list 1 -->
+                        <ul class="flex-1 flex flex-col gap-y-5">
+                            <li>
+                                <a href="#" class="hover:text-accent transition-all">Home</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-accent transition-all">Doctors</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-accent transition-all">Department</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-accent transition-all">Services</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-accent transition-all">Blog</a>
+                            </li>
+                        </ul>
+                        <!-- list 2 -->
+                        <ul class="flex-1 flex flex-col gap-y-5">
+                            <li>
+                                <a href="#" class="hover:text-accent transition-all">Our Pricing</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-accent transition-all">Contact</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-accent transition-all">Careers</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-accent transition-all">Fags</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-accent transition-all">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- footer opening hours section -->
+                <div class="footer__item flex-1">
+                    <h4 class="h4 mb-5">Opening Hours</h4>
+                    <!-- list -->
+                    <div class="flex flex-col gap-5">
+                        <!-- item -->
+                        <div class="flex-1 ">
+                            <div class="flex justify-between items-center border-b pb-[10px]">
+                                <div>Monday - Thursday</div>
+                                <div class="text-accent font-medium">8:00 AM - 6:00 PM</div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div class="flex-1 ">
+                            <div class="flex justify-between items-center border-b pb-[10px]">
+                                <div>Friday - Saturday</div>
+                                <div class="text-accent font-medium">10:00 AM - 4:00 PM</div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div class="flex-1 ">
+                            <div class="flex justify-between items-center border-b pb-[10px]">
+                                <div>Sunday</div>
+                                <div class="text-accent font-medium">Emergency Only</div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div class="flex-1 ">
+                            <div class="flex justify-between items-center border-b pb-[10px]">
+                                <div>Personal</div>
+                                <div class="text-accent font-medium">7:00 AM - 9:00 PM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- copyright -->
+        <div class="py-[30px] border-t">
+            <div class="container mx-auto text-center">
+                <div class="font-light text-base">&copy; 2023 Insove - All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <!-- end oppointment -->
+    <!-- temp div -->
+</body>
+<!-- Swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<!-- Scroll reveal -->
+<script src="js/scrollreveal.min.js"></script>
+<!-- main.js -->
+<script src="js/main.js"></script>
+
+</html>
